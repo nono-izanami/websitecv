@@ -58,7 +58,7 @@ def detect(image):
     # Threshold untuk memisahkan background putih
     _, bw_apel = cv2.threshold(
         hasilFilter,
-        245,
+        240,
         255,
         cv2.THRESH_BINARY_INV
     )
@@ -98,18 +98,16 @@ def detect(image):
     # H : 0-179
     # S : 0-255
     # V : 0-255
-    H = hsv[:,:,0] / 179.0
-    S = hsv[:,:,1] / 255.0
-    V = hsv[:,:,2] / 255.0
+
+    S = hsv[:,:,2] / 255.0
+    V = hsv[:,:,3] / 255.0
 
     # ==========================================
     # Deteksi area rusak
     # Sama seperti MATLAB
     # ==========================================
 
-    bw_rusak = (
-        (V < 0.45 |
-         ((S < 0.35 & (V < 0.7))
+    bw_rusak = (V < 0.6) & (S < 0.8)
 
     # hanya area apel
     bw_rusak = bw_rusak & (bw_apel > 0)
@@ -117,7 +115,7 @@ def detect(image):
     # hapus noise kecil
     bw_rusak = remove_small_objects(
         bw_rusak,
-        min_size=200
+        min_size=800
     )
 
     # fill hole
@@ -143,7 +141,7 @@ def detect(image):
 
     persen = (area_rusak / area_apel) * 100
 
-    if persen < 10:
+    if persen < 5:
         hasil = "Apel Tidak Rusak"
     else:
         hasil = "Apel Rusak"
