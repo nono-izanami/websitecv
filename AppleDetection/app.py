@@ -25,7 +25,7 @@ if uploaded is not None:
 
     image = Image.open(uploaded)
 
-    st.image(image,width=350)
+    st.image(image, use_container_width=True)
 
     if st.button("Proses Deteksi"):
 
