@@ -27,7 +27,7 @@ if uploaded is not None:
 
     st.image(image, use_container_width=True)
 
-    if st.button("Proses Deteksi"):
+    if st.button("Deteksi"):
 
         hasil,persen,maskApel,maskRusak = detector.detect(image)
 
