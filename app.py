@@ -10,6 +10,69 @@ st.set_page_config(
     layout="wide"
 )
 
+st.markdown("""
+<style>
+
+/* Background utama */
+.stApp {
+    background-color: white;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #f7f7f7;
+}
+
+/* Judul */
+h1 {
+    color: #2E7D32;
+    text-align: center;
+}
+
+/* Paragraf */
+p {
+    color: #333333;
+}
+
+/* Tombol */
+.stButton>button {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+}
+
+.stButton>button:hover {
+    background-color: #388E3C;
+    color: white;
+}
+
+/* File uploader */
+[data-testid="stFileUploader"] {
+    background-color: #fafafa;
+    border: 2px dashed #4CAF50;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* Metric */
+[data-testid="stMetric"] {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* Gambar */
+img {
+    border-radius: 10px;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 st.title("🍎 Deteksi Kerusakan Apel")
 
 st.write(
