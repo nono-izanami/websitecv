@@ -13,7 +13,7 @@ st.set_page_config(
 st.title("🍎 Deteksi Kerusakan Apel")
 
 st.write(
-    "Upload gambar apel kemudian klik **Proses Deteksi**."
+    "Upload gambar apel kemudian klik **Deteksi**."
 )
 
 uploaded = st.file_uploader(
