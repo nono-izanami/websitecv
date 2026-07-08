@@ -5,7 +5,7 @@ import detector
 print("Detector berhasil dipanggil")
 
 st.set_page_config(
-    page_title="Deteksi Kerusakan Apel",
+    page_title="Deteksi Kerusakan Apel Menggunakan Image Processing",
     page_icon="🍎",
     layout="wide"
 )
