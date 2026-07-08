@@ -58,7 +58,7 @@ p,span,label,div{
 </style>
 """, unsafe_allow_html=True)
 
-st.title("Deteksi Kerusakan Apel")
+st.title("Deteksi Kerusakan Apel Menggunakan Image Processing")
 
 st.write(
     "Upload gambar apel kemudian klik **Deteksi**."
