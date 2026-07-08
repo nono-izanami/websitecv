@@ -13,61 +13,46 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* Background utama */
-.stApp {
-    background-color: white;
+/* Background */
+.stApp{
+    background-color:white;
 }
 
-/* Sidebar */
-section[data-testid="stSidebar"] {
-    background-color: #f7f7f7;
+/* Semua teks */
+html, body, [class*="css"], [data-testid="stAppViewContainer"] {
+    color: black !important;
 }
 
 /* Judul */
-h1 {
-    color: #2E7D32;
-    text-align: center;
+h1,h2,h3,h4,h5,h6{
+    color:black !important;
 }
 
 /* Paragraf */
-p {
-    color: #333333;
-}
-
-/* Tombol */
-.stButton>button {
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 10px;
-    border: none;
-    padding: 10px 25px;
-    font-size: 16px;
-}
-
-.stButton>button:hover {
-    background-color: #388E3C;
-    color: white;
+p,span,label,div{
+    color:black !important;
 }
 
 /* File uploader */
-[data-testid="stFileUploader"] {
-    background-color: #fafafa;
-    border: 2px dashed #4CAF50;
-    border-radius: 10px;
-    padding: 15px;
+[data-testid="stFileUploader"] label{
+    color:black !important;
 }
 
 /* Metric */
-[data-testid="stMetric"] {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 10px;
-    padding: 15px;
+[data-testid="stMetric"] label,
+[data-testid="stMetricValue"]{
+    color:black !important;
 }
 
-/* Gambar */
-img {
-    border-radius: 10px;
+/* Success/Error message */
+[data-testid="stAlert"]{
+    color:black !important;
+}
+
+/* Button */
+.stButton>button{
+    color:white !important;
+    background:#4CAF50;
 }
 
 </style>
